@@ -1,0 +1,70 @@
+* {
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-right {
+    text-align: right !important;
+}
+
+.attachment-img-fluid,
+.size-img-fluid {
+    @extend .img-fluid;
+}
+
+.mobile-right {
+    text-align: right;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+}
+
+.mobile-left {
+    text-align: left;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+}
+
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f2f3f5;
+}
+
+@import 'nav';
+@import 'footer';
+@import 'pages/home';
+@import 'pages/single';
+@import 'pages/author';
+@import 'pages/cat';
+@import 'pages/author_list';
+@import 'pages/register';

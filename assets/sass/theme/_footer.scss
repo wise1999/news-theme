@@ -1,0 +1,108 @@
+footer.page-footer {
+    background-color: #27292a;
+
+    .line-after-navs {
+        background-color: #000;
+        height: 2px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .simple-navs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0 20px;
+        padding: 35px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        li {
+            a {
+                text-transform: uppercase;
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            gap: 20px;
+        }
+    }
+
+    .row-navis {
+        padding-bottom: 60px;
+        justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .links-menu {
+        strong {
+            display: block;
+            margin-bottom: 30px;
+            color: #fff;
+            font-size: 20px;
+
+            @include media-breakpoint-down(md) {
+                text-align: center;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-height: 140px;
+            height: 100%;
+            width: 100%;
+            gap: 5px 0;
+
+            li {
+                width: 48%;
+
+                a {
+                    color: #a1aeae;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                @include media-breakpoint-down(md) {
+                    width: max-content;
+                    text-align: center;
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.single-links {
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+    .footer-copies {
+        background-color: #1f2021;
+        padding: 25px 0;
+
+        span {
+            text-align: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: #a1aeae;
+            }
+        }
+    }
+}

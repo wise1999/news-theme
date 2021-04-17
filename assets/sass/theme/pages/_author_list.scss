@@ -1,0 +1,245 @@
+header.header-author-list {
+
+    .ad {
+        margin-bottom: 30px;
+    }
+
+    .hold-blogs {
+        background-color: #fff;
+        padding: 25px 30px;
+        padding-bottom: 10px;
+
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 0 15px;
+            text-decoration: none;
+            align-items: center;
+            position: relative;
+            margin-bottom: 60px;
+
+            img {
+                width: 85px;
+                height: 85px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .infos {
+                display: flex;
+                flex-direction: column;
+
+                span {
+                    color: #aeaeae;
+                    font-size: 18px;
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 10px;
+                    margin-right: auto;
+                }
+
+                .title {
+                    color: #000;
+                    font-weight: 400;
+                    font-size: 13px;
+                    word-break: break-word;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: -35px;
+                left: 0;
+                width: 100%;
+                margin: 0 auto;
+                height: 2px;
+                background-color: #dadce0;
+
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    left: unset;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+
+                &:after {
+                    display: none;
+                }
+            }
+
+            @include media-breakpoint-down(lg) {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                gap: 10px 0;
+            }
+        }
+    }
+
+    h2 {
+        text-transform: capitalize;
+        font-size: 22px;
+        font-weight: 500;
+        color: #000;
+        margin-bottom: 15px;
+    }
+
+    .line-special {
+        margin-bottom: 35px;
+        width: 100%;
+        height: 3px;
+        background-color: #dadce0;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            background-color: #ed1c24;
+            width: 5%;
+        }
+    }
+
+    .pagination {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 0 5px;
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            flex: auto;
+            align-items: center;
+
+
+            a,
+            span {
+                color: #fff;
+                font-weight: 400;
+                padding: 15px 0;
+                display: inline-flex;
+                align-items: center;
+                flex: auto;
+                justify-content: center;
+                gap: 0 5px;
+                background-color: #27292a;
+                border: none;
+                height: 100%;
+
+                img {
+                    height: 10px;
+                    filter: invert(1);
+                }
+
+                @include media-breakpoint-down(md) {
+                    padding: 15px 25px;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: #ed1c24;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(md) {
+            gap: 10px;
+        }
+    }
+
+    .author-single {
+        margin-bottom: 30px;
+
+        .author-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .author-bg {
+                img {
+                    height: 110px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    width: 100%;
+                }
+            }
+
+            .avatar {
+                position: absolute;
+                left: 50%;
+                top: 70px;
+                transform: translateX(-50%);
+
+                img {
+                    height: 85px;
+                    width: 85px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+
+            .author-data {
+                background-color: #fff;
+                padding-top: 65px;
+                padding-bottom: 30px;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+
+                a {
+                    text-transform: capitalize;
+                    font-size: 20px;
+                    color: #000;
+                    font-weight: 500;
+                    display: block;
+                    text-decoration: none;
+                    text-align: center;
+                }
+
+                span {
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 400;
+                    display: block;
+                    margin-bottom: 30px;
+                }
+
+                .socials {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 0 2.5px;
+                    justify-content: center;
+
+                    li {
+                        a {
+                            img {
+                                height: 25px;
+                                width: 25px;
+                                opacity: .25;
+                                transition: all .3s ease-in-out;
+                            }
+                        }
+
+                        &:hover {
+                            a {
+                                img {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
